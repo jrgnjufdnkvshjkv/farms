@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+
+
+    <!-- Features Start -->
+    <div class="container-fluid bg-primary feature py-5 pb-lg-0" style="margin: 90px 0 135px 0;">
+        <div class="container py-5 pb-lg-0">
+            <div class="mx-auto text-center mb-3 pb-2" style="max-width: 500px;">
+                <h6 class="text-uppercase text-secondary">Features</h6>
+                <h1 class="display-5 text-white">Why Choose Us!!!</h1>
+            </div>
+            <div class="row g-5">
+                {% for fe in feature %}
+
+                <div class="col-lg-6">
+                    <div class="d-block bg-white h-100 text-center p-5 pb-lg-0">
+                        <p>{{fe.bio}}</p>
+                        <img  src="{{fe.img.url}}" alt="">
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    <!-- Features Start -->
+    
+
+  {% endblock content %}
